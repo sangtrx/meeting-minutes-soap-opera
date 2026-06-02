@@ -1,0 +1,49 @@
+[build-system]
+requires = ["setuptools>=65.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "meeting-minutes-soap-opera"
+version = "0.2.0"
+description = "Transform boring meeting notes into dramatic theatrical recaps"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Author"}]
+requires-python = ">=3.8"
+keywords = ["cli", "meetings", "drama", "transformation"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+meeting-minutes-soap-opera = "meeting_minutes_soap_opera.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/yourusername/meeting-minutes-soap-opera"
+Repository = "https://github.com/yourusername/meeting-minutes-soap-opera.git"
+
+[tool.setuptools]
+packages = ["meeting_minutes_soap_opera"]
+
+[tool.black]
+line-length = 100
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "-v --tb=short"

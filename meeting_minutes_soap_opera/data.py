@@ -1,4 +1,8 @@
-STYLES = {
+"""Message templates and keywords for meeting note transformation."""
+
+from __future__ import annotations
+
+STYLES: dict[str, dict[str, list[str]]] = {
     "dramatic": {
         "intros": [
             "In a shocking turn,",
@@ -64,11 +68,16 @@ STYLES = {
     },
 }
 
-INTROS = STYLES["dramatic"]["intros"]
-EMPHASIS = STYLES["dramatic"]["emphasis"]
-CLIFFHANGERS = STYLES["dramatic"]["cliffhangers"]
+INTROS: list[str] = STYLES["dramatic"]["intros"]
+"""list[str]: Default intro phrases for dramatic style."""
 
-ACTION_KEYWORDS = [
+EMPHASIS: list[str] = STYLES["dramatic"]["emphasis"]
+"""list[str]: Default emphasis phrases for dramatic style."""
+
+CLIFFHANGERS: list[str] = STYLES["dramatic"]["cliffhangers"]
+"""list[str]: Default cliffhanger phrases for dramatic style."""
+
+ACTION_KEYWORDS: list[str] = [
     "action",
     "todo",
     "to-do",
@@ -78,3 +87,4 @@ ACTION_KEYWORDS = [
     "next step",
     "due",
 ]
+"""list[str]: Keywords used to identify action items in meeting notes."""

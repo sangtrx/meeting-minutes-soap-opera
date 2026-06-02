@@ -2,10 +2,7 @@
 
 from __future__ import annotations
 
-
-class ValidationError(ValueError):
-    """Raised when input validation fails."""
-    pass
+from .exceptions import ValidationError
 
 
 def validate_mode(mode: str) -> str:
